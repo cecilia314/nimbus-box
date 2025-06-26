@@ -50,7 +50,6 @@ const OTPModal = ({
   const handleResendOTP = async () => {
     // call Api to resend OTP
     await sendEmailOTP({ email });
-    console.log('OTP resent to', email);
   };
 
   return (
@@ -109,7 +108,9 @@ const OTPModal = ({
                 variant="link"
                 className="pl-1 text-brand"
                 onClick={handleResendOTP}
-              />
+              >
+                Resend OTP
+              </Button>
             </div>
           </div>
         </AlertDialogFooter>
