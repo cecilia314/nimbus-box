@@ -16,8 +16,17 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'cloud.appwrite.io',
       },
+      {
+        protocol: 'https',
+        hostname: 'nyc.cloud.appwrite.io/v1',
+      },
       { protocol: 'https', hostname: 'img.freepik.com' },
     ],
+  },
+  experimental: {
+    serverActions: {
+      bodySizeLimit: '50mb',
+    },
   },
 };
 
