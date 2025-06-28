@@ -28,3 +28,15 @@ declare interface ThumbnailProps {
   imageClassName?: string;
   className?: string;
 }
+
+declare interface SearchParamProps {
+  params?: Promise<SegmentParams>;
+  searchParams?: Promise<{ [key: string]: string | string[] | undefined }>;
+}
+
+declare interface GetFilesProps {
+  types: FileType[];
+  searchText?: string;
+  sort?: string;
+  limit?: number;
+}

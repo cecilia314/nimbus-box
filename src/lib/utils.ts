@@ -119,6 +119,21 @@ export const getFileIcon = (
   }
 };
 
+export const getFileTypesParams = (type: string) => {
+  switch (type) {
+    case 'documents':
+      return ['document'];
+    case 'images':
+      return ['image'];
+    case 'media':
+      return ['video', 'audio'];
+    case 'others':
+      return ['other'];
+    default:
+      return ['document'];
+  }
+};
+
 // APPWRITE URL UTILS
 // Construct appwrite file URL - https://appwrite.io/docs/apis/rest#images
 export const constructFileUrl = (bucketFileId: string) => {
