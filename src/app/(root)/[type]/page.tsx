@@ -1,3 +1,4 @@
+import Card from '@/components/Card';
 import Sort from '@/components/Sort';
 import { getFiles } from '@/lib/actions/file.actions';
 import { getFileTypesParams } from '@/lib/utils';
@@ -34,7 +35,7 @@ const Page = async ({ searchParams, params }: SearchParamProps) => {
       {files.total > 0 ? (
         <section className="file-list">
           {files.documents.map((file: Models.Document) => (
-            <li key={file.$id}>{file.name}</li>
+            <Card key={file.$id} file={file} />
           ))}
         </section>
       ) : (
