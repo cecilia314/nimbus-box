@@ -31,6 +31,7 @@ const Page = async ({ searchParams, params }: SearchParamProps) => {
           </div>
         </div>
       </section>
+
       {/* Render the files */}
       {files.total > 0 ? (
         <section className="file-list">

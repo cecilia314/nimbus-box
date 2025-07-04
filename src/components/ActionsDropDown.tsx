@@ -105,6 +105,13 @@ const ActionsDropDown = ({ file }: { file: Models.Document }) => {
               onRemove={handleRemoveUser}
             />
           )}
+
+          {action.value === 'delete' && (
+            <p className="delete-confirmation">
+              Are you sure you want to delete{` `}
+              <span className="delete-file-name">{file.name}</span>?
+            </p>
+          )}
         </DialogHeader>
 
         {['rename', 'delete', 'share'].includes(action.value) && (
