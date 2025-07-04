@@ -28,7 +28,7 @@ import {
   renameFile,
   updateFileUsers,
 } from '@/lib/actions/file.actions';
-import { FileDetails } from './ActionsModalContent';
+import { FileDetails, ShareInput } from './ActionsModalContent';
 
 const ActionsDropDown = ({ file }: { file: Models.Document }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -68,6 +68,19 @@ const ActionsDropDown = ({ file }: { file: Models.Document }) => {
     setIsLoading(false);
   };
 
+  const handleRemoveUser = async (email: string) => {
+    const updatedEmails = emails.filter((e) => e !== email);
+
+    const success = await updateFileUsers({
+      fileId: file.$id,
+      emails: updatedEmails,
+      path,
+    });
+
+    if (success) setEmails(updatedEmails);
+    closeAllModals();
+  };
+
   const renderDialogContent = () => {
     if (!action) return null;
     return (
@@ -84,6 +97,14 @@ const ActionsDropDown = ({ file }: { file: Models.Document }) => {
           )}
 
           {action.value === 'details' && <FileDetails file={file} />}
+
+          {action.value === 'share' && (
+            <ShareInput
+              file={file}
+              onInputChange={setEmails}
+              onRemove={handleRemoveUser}
+            />
+          )}
         </DialogHeader>
 
         {['rename', 'delete', 'share'].includes(action.value) && (
