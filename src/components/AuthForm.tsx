@@ -122,7 +122,7 @@ const AuthForm = ({ type }: { type: FormType }) => {
           />
           <Button
             type="submit"
-            className="form-submit-button"
+            className="form-submit-button text-white"
             disabled={isLoading}
           >
             {type === 'sign-in' ? 'Sign In' : 'Sign Up'}

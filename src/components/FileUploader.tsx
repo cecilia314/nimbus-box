@@ -70,7 +70,9 @@ const FileUploader = ({ ownerId, accountId, className }: FileUploaderProps) => {
           width={24}
           height={24}
         />
-        <p>Upload</p>
+        <p className="text-white text-[16px] leading-[24px] font-semibold">
+          Upload
+        </p>
       </Button>
 
       {files.length > 0 && (

@@ -313,7 +313,8 @@ body {
   background-color: var(--color-brand);
   font-size: 14px;
   line-height: 20px;
-  font-weight: 500;
+  font-weight: 600;
+  color: white;
   border-radius: 9999px;
   transition: all 0.3s ease;
 }
@@ -790,7 +791,7 @@ body {
   border-radius: 9999px;
   font-size: 14px;
   line-height: 20px;
-  font-weight: 500;
+  font-weight: 600;
   height: 66px;
   transition: all 0.3s ease;
 }
