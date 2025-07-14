@@ -2,7 +2,7 @@
 
 A modern, full-stack cloud storage application built with Next.js and Appwrite. Upload, organize, and manage your files with a beautiful, responsive interface.
 
-![Nimbus Box Hero](public/readme/hero.png)
+![Nimbus Box Hero](public/assets/readme/hero.png)
 
 ## 🚀 Features
 
@@ -122,15 +122,15 @@ export async function uploadFile() {
 
 ### Dashboard
 
-![Dashboard](public/readme/dashboard-screen.png)
+![Dashboard](public/assets/readme/dashboard-screen.png)
 
 ### Images Screen
 
-![File Upload](public/readme/images-screen.png)
+![File Upload](public/assets/readme/images-screen.png)
 
 ### Authentication
 
-![Auth](public/readme/authentication.png)
+![Auth](public/assets/readme/authentication.png)
 
 ## 🚀 Getting Started
 
