@@ -120,7 +120,9 @@ const ActionsDropDown = ({ file }: { file: Models.Document }) => {
               Cancel
             </Button>
             <Button onClick={handleAction} className="modal-submit-button">
-              <p className="capitalize">{action.value}</p>
+              <p className="capitalize text-white font-semibold">
+                {action.value}
+              </p>
               {isLoading && (
                 <Image
                   src="/assets/icons/loader.svg"
@@ -149,7 +151,7 @@ const ActionsDropDown = ({ file }: { file: Models.Document }) => {
           />
         </DropdownMenuTrigger>
         <DropdownMenuContent className="bg-white">
-          <DropdownMenuLabel className="max-w[200px] truncate">
+          <DropdownMenuLabel className="max-w-[200px] truncate">
             {file.name}
           </DropdownMenuLabel>
           <DropdownMenuSeparator />
